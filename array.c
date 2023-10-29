@@ -67,7 +67,7 @@ BOOL APIENTRY DllMain(HINSTANCE instance, DWORD reason, LPVOID reserved) {
 #endif
 
 /**
- * TODO: Definición de {@code new_array}.
+ * TODO: Description of {@code new_array}.
  */
 LANGUAGE DLLIMPORT CALLING Array* new_array(int elem_size) {
     Array* array = malloc(sizeof(Array));
@@ -78,7 +78,7 @@ LANGUAGE DLLIMPORT CALLING Array* new_array(int elem_size) {
 }
 
 /**
- * TODO: Definición de {@code new_array_with_elements}.
+ * TODO: Description of {@code new_array_with_elements}.
  */
 LANGUAGE DLLIMPORT CALLING Array* new_array_with_elements(int elem_size, int nargs, ...) {
     Array* array = new_array(elem_size);
@@ -91,14 +91,14 @@ LANGUAGE DLLIMPORT CALLING Array* new_array_with_elements(int elem_size, int nar
 }
 
 /**
- * TODO: Definición de {@code new_array_generic}.
+ * TODO: Description of {@code new_array_generic}.
  */
 LANGUAGE DLLIMPORT CALLING Array* new_array_generic() {
     return new_array(sizeof(void*));
 }
 
 /**
- * TODO: Definición de {@code new_array_generic_with_elements}.
+ * TODO: Description of {@code new_array_generic_with_elements}.
  */
 LANGUAGE DLLIMPORT CALLING Array* new_array_generic_with_elements(int nargs, ...) {
     Array* array = new_array(sizeof(void*));
@@ -111,7 +111,7 @@ LANGUAGE DLLIMPORT CALLING Array* new_array_generic_with_elements(int nargs, ...
 }
 
 /**
- * TODO: Definición de {@code add_array_element}.
+ * TODO: Description of {@code add_array_element}.
  */
 LANGUAGE DLLIMPORT CALLING void add_array_element(Array* array, void* element) {
     array->length++;
@@ -123,7 +123,7 @@ LANGUAGE DLLIMPORT CALLING void add_array_element(Array* array, void* element) {
 }
 
 /**
- * TODO: Definición de {@code add_array_element_copy}.
+ * TODO: Description of {@code add_array_element_copy}.
  */
 LANGUAGE DLLIMPORT CALLING void add_array_element_copy(Array* array, void* element, int length) {
     void* aux = malloc(array->elem_size*length);
@@ -132,7 +132,7 @@ LANGUAGE DLLIMPORT CALLING void add_array_element_copy(Array* array, void* eleme
 }
 
 /**
- * TODO: Definición de {@code add_array_various_elements}.
+ * TODO: Description of {@code add_array_various_elements}.
  */
 LANGUAGE DLLIMPORT CALLING void add_array_various_elements(Array* array, int nargs, ...) {
     va_list ap;
@@ -143,7 +143,7 @@ LANGUAGE DLLIMPORT CALLING void add_array_various_elements(Array* array, int nar
 }
 
 /**
- * TODO: Definición de {@code remove_last_array_element}.
+ * TODO: Description of {@code remove_last_array_element}.
  */
 LANGUAGE DLLIMPORT CALLING void remove_last_array_element(Array* array) {
     array->length--;
@@ -154,7 +154,7 @@ LANGUAGE DLLIMPORT CALLING void remove_last_array_element(Array* array) {
 }
 
 /**
- * TODO: Definición de {@code remove_last_array_element_and_free}.
+ * TODO: Description of {@code remove_last_array_element_and_free}.
  */
 LANGUAGE DLLIMPORT CALLING void remove_last_array_element_and_free(Array* array) {
     free(array->data[array->length-1]);
