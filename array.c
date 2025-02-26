@@ -84,7 +84,7 @@ LANGUAGE DLLIMPORT CALLING Array* new_array_with_elements(int elem_size, int nar
     Array* array = new_array(elem_size);
     va_list ap;
     va_start(ap, nargs);
-    for (int i =0; i<nargs; i++)
+    for (int i = 0; i < nargs; i++)
         add_array_element(array, va_arg(ap, void*));
     va_end(ap);
     return array;
@@ -104,7 +104,7 @@ LANGUAGE DLLIMPORT CALLING Array* new_array_generic_with_elements(int nargs, ...
     Array* array = new_array(sizeof(void*));
     va_list ap;
     va_start(ap, nargs);
-    for (int i =0; i<nargs; i++)
+    for (int i = 0; i < nargs; i++)
         add_array_element(array, va_arg(ap, void*));
     va_end(ap);
     return array;
@@ -137,7 +137,7 @@ LANGUAGE DLLIMPORT CALLING void add_array_element_copy(Array* array, void* eleme
 LANGUAGE DLLIMPORT CALLING void add_array_various_elements(Array* array, int nargs, ...) {
     va_list ap;
     va_start(ap, nargs);
-    for (int i =0; i<nargs; i++)
+    for (int i = 0; i < nargs; i++)
         add_array_element(array, va_arg(ap, void*));
     va_end(ap);
 }
